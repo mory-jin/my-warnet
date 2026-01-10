@@ -339,7 +339,7 @@ export default function Home() {
 
                 {/* Facebook */}
                 <a 
-                  href="https://facebook.com/cybernetgaming" 
+                  href="#" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative"
