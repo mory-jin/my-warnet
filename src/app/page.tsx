@@ -36,7 +36,15 @@ export default function Home() {
   };
 
   const handleContactUs = () => {
-    alert('Hubungi kami di:\n📞 +62 812-3456-7890\n📍 Jl. Gaming No. 123, Jakarta Selatan\n🕐 Buka setiap hari 10:00 - 02:00');
+    const phoneNumber = "6281234567890"; // tanpa + dan spasi
+    const message = encodeURIComponent(
+      "Halo, saya ingin bertanya tentang layanan Anda."
+    );
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${message}`,
+      "_blank"
+    );
   };
 
   return (
@@ -111,12 +119,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll Indicator */}
+          {/* Scroll Indicator
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-          </div>
+          </div> */}
         </section>
 
         {/* Features Section */}
@@ -270,16 +278,16 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-12">Siap untuk pengalaman gaming terbaik?</p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-purple-900/30 transition-all duration-300 cursor-pointer transform hover:scale-105" onClick={handleContactUs}>
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-purple-900/30 transition-all duration-300 cursor-pointer transform hover:scale-105" onClick={handleStartPlaying}>
                 <div className="text-3xl mb-4">📍</div>
                 <h3 className="text-xl font-bold mb-2 text-purple-400">Lokasi</h3>
-                <p className="text-gray-400">Jl. Gaming No. 123, Jakarta Selatan</p>
+                <p className="text-gray-400">Lelateng, Kabupaten Jembrana, Bali</p>
                 <p className="text-sm text-purple-400 mt-2">Klik untuk info kontak</p>
               </div>
               <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-purple-900/30 transition-all duration-300 cursor-pointer transform hover:scale-105" onClick={handleContactUs}>
                 <div className="text-3xl mb-4">📞</div>
                 <h3 className="text-xl font-bold mb-2 text-purple-400">Kontak</h3>
-                <p className="text-gray-400">+62 812-3456-7890</p>
+                <p className="text-gray-400">087751790082</p>
                 <p className="text-sm text-purple-400 mt-2">Klik untuk info kontak</p>
               </div>
             </div>
@@ -288,17 +296,10 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Jam Operasional</h3>
               <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
                 <div className="flex justify-between">
-                  <span className="text-gray-300">Senin - Kamis</span>
-                  <span className="text-purple-400 font-bold">10:00 - 02:00</span>
+                  <span className="text-gray-300">Senin - Minggu</span>
+                  <span className="text-purple-400 font-bold">24 Jam</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Jumat - Sabtu</span>
-                  <span className="text-purple-400 font-bold">10:00 - 04:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Minggu</span>
-                  <span className="text-purple-400 font-bold">10:00 - 03:00</span>
-                </div>
+
                 <div className="flex justify-between">
                   <span className="text-gray-300">Libur Nasional</span>
                   <span className="text-purple-400 font-bold">24 Jam</span>
@@ -321,7 +322,7 @@ export default function Home() {
               <div className="flex justify-center items-center gap-6 mb-8">
                 {/* Instagram */}
                 <a 
-                  href="https://instagram.com/cybernetgaming" 
+                  href="https://www.instagram.com/skymoon_net/?hl=id" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative"
@@ -355,7 +356,7 @@ export default function Home() {
 
                 {/* TikTok */}
                 <a 
-                  href="https://tiktok.com/@cybernetgaming" 
+                  href="https://www.tiktok.com/@skymoon_nett?_r=1&_t=ZS-917HJwFJMxR" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative"
@@ -377,7 +378,7 @@ export default function Home() {
 
             {/* Copyright */}
             <div className="text-center">
-              <p className="text-gray-400 mb-4">© 2024 CyberNet Gaming. All rights reserved.</p>
+              <p className="text-gray-400 mb-4">© 2024 SkyMoon Net. All rights reserved.</p>
               <div className="flex justify-center space-x-6">
                 <span className="text-2xl hover:text-purple-400 transition-colors cursor-pointer">🎮</span>
                 <span className="text-2xl hover:text-purple-400 transition-colors cursor-pointer">🕹️</span>
