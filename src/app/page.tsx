@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   const router = useRouter();
